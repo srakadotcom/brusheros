@@ -1,0 +1,10 @@
+name: Brusheros
+version: '${version}'
+main: pl.joagger.brusheros.BrushPlugin
+commands:
+  givebrush:
+    permission: brusheros.givebrush
+    description: Nadaje brusha
+    usage: /givebrush (nazwa)
+  clear:
+    aliases: [ci,clean,clearinvent,clearinventory]

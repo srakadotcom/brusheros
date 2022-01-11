@@ -1,0 +1,131 @@
+## Super kox plugin na brushowanie - tylko ze to juz sa jakies dojebane kilofy, a nie brushe
+
+# Pamietaj ze ten plugin nie ma wspolpracy z np. WorldGuardem i ktos ci tym moze rozwalic spawna.
+# Wiec nwm, postaw se kopalnie na innym swiecie czy cos
+
+# Druga rzecz, jak komus sie konczy kilof to plugin nie sprawdza ile blokow ma wykopac
+# tylko od razu wszystkie niszczy.
+
+brushes:
+  huj:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l1x1 &e(Poziom I) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(1/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 0
+      y: 0
+      z: 0
+  huj2:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l2x2 &e(Poziom II) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(2/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 1
+      y: 0
+      z: 1
+  huj3:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l3x3 &e(Poziom III) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(3/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 1
+      y: 1
+      z: 1
+  huj4:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l4x4 &e(Poziom IV) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(4/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 1
+      y: 2
+      z: 1
+  huj5:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l5x5 &e(Poziom V) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(5/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 2
+      y: 2
+      z: 1
+  huj6:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l6x6 &e(Poziom VI) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(6/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 3
+      y: 2
+      z: 1
+  huj6plus:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l6x6 PREMIUM &e(Poziom VII) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(7/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 3
+      y: 2
+      z: 1
+  huj6plusplus:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l6x6 PREMIUM+ &e(Poziom VIII) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(8/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 3
+      y: 2
+      z: 1
+  huj9:
+    name: "&8&l&m\u00bb&r &f&lBrush &6&l6x6 PREMIUM+ &e(Poziom IX) &8&l&m\u00AB"
+    lore:
+      - "&7Poziom brusha: &7(9/8)"
+      - "&8&l&m\u00bb            \u00AB"
+      - "&7Brush to przedmiot ktorym kopiesz &aszybiciej &7i &awiecej"
+      - "&7Ulepszanie brusha mozesz znalezc pod komenda &a&n/kowal."
+      - "&8&l&m\u00bb            \u00AB"
+    type: BLAZE_ROD
+    dynamic_area:
+      x: 10
+      y: 10
+      z: 10
+blocked: # bloki ktorych nie moze zniszczyc brush
+  - BEDROCK
+
+# Czy mozna wyrzucac/wrzucac do skrzynki brushaa?
+enableBrushDrop: false
