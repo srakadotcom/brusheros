@@ -48,8 +48,10 @@ public class BrushListener implements Listener {
 
         for (Block block : item.getArea().getAreaBlocks(event.getBlock().getLocation(), getDirection(event.getPlayer()))) {
             if (block != null && configuration.isAllowed(block.getType())) {
-                if (block.breakNaturally())
-                    Bukkit.getServer().getPluginManager().callEvent(new BrushBlockBreakEvent(block, event.getPlayer()));
+                BrushBlockBreakEvent brushEvent = new BrushBlockBreakEvent(block, event.getPlayer());
+                Bukkit.getServer().getPluginManager().callEvent(brushEvent);
+                if(!brushEvent.isCancelled())
+                    block.breakNaturally();
             }
         }
     }
@@ -65,8 +67,10 @@ public class BrushListener implements Listener {
 
         for (Block block : item.getArea().getAreaBlocks(event.getClickedBlock().getLocation(), getDirection(event.getPlayer()))) {
             if (block != null && configuration.isAllowed(block.getType())) {
-                if (block.breakNaturally())
-                    Bukkit.getServer().getPluginManager().callEvent(new BlockBreakEvent(event.getClickedBlock(), event.getPlayer()));
+                BrushBlockBreakEvent brushEvent = new BrushBlockBreakEvent(block, event.getPlayer());
+                Bukkit.getServer().getPluginManager().callEvent(brushEvent);
+                if(!brushEvent.isCancelled())
+                    block.breakNaturally();
             }
         }
     }
