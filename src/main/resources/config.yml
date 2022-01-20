@@ -1,10 +1,10 @@
-## Super kox plugin na brushowanie - tylko ze to juz sa jakies dojebane kilofy, a nie brushe
+## Super kox plugin na brushowanie
 
-# Pamietaj ze ten plugin nie ma wspolpracy z np. WorldGuardem i ktos ci tym moze rozwalic spawna.
-# Wiec nwm, postaw se kopalnie na innym swiecie czy cos
-
-# Druga rzecz, jak komus sie konczy kilof to plugin nie sprawdza ile blokow ma wykopac
+# Jest tylko jeden problem z tym pluginem - jak komus sie konczy kilof to plugin nie sprawdza ile blokow ma wykopac
 # tylko od razu wszystkie niszczy.
+
+# Jak ktos chce zebym to naprawil to piszcie, ale i tak pewnie bede mial wyjebane
+# bo nikt nie uzywa brushy jako kilof tylko jako blaze rod
 
 brushes:
   huj:

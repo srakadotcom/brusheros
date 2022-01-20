@@ -8,3 +8,5 @@ commands:
     usage: /givebrush (nazwa)
   clear:
     aliases: [ci,clean,clearinvent,clearinventory]
+  brushreload:
+    permission: brush.reload

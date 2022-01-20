@@ -24,6 +24,9 @@ public class BrushKeepListener implements Listener {
 
     @EventHandler
     private void onDrop(PlayerDropItemEvent event) {
+        if(!configuration.isEnableBrushDrop())
+            return;
+
         if (event.getPlayer().hasPermission(PERMISSION)) {
             return;
         }
@@ -37,6 +40,9 @@ public class BrushKeepListener implements Listener {
 
     @EventHandler
     private void onItemClickMove(InventoryClickEvent event) {
+        if(!configuration.isEnableBrushDrop())
+            return;
+
         if (event.getWhoClicked().hasPermission(PERMISSION)) {
             return;
         }
@@ -51,6 +57,9 @@ public class BrushKeepListener implements Listener {
 
     @EventHandler
     private void onItemClickMove(InventoryDragEvent event) {
+        if(!configuration.isEnableBrushDrop())
+            return;
+
         if (event.getWhoClicked().hasPermission(PERMISSION)) {
             return;
         }
@@ -65,6 +74,9 @@ public class BrushKeepListener implements Listener {
 
     @EventHandler
     private void onHotbarMove(InventoryClickEvent event) {
+        if(!configuration.isEnableBrushDrop())
+            return;
+
         if (event.getWhoClicked().hasPermission(PERMISSION)) {
             return;
         }
