@@ -8,7 +8,7 @@ import org.bukkit.block.BlockFace;
 import java.util.List;
 
 public interface BrushArea {
-    private static List<Block> getBlocks(Location base, Matrix2x3D matrix) {
+    static List<Block> getBlocks(Location base, Matrix2x3D matrix) {
         List<Block> blocks = Lists.newArrayList();
         for (double x = (base.getBlockX() - matrix.xMin()); x <= (base.getBlockX() + matrix.xMax()); x++) {
             for (double y = (base.getBlockY() - matrix.yMin()); y <= (base.getBlockY() + matrix.yMax()); y++) {

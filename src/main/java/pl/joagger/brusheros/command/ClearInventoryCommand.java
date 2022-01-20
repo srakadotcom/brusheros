@@ -17,6 +17,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import pl.joagger.brusheros.BrushPluginConfiguration;
 import pl.joagger.brusheros.ClickableInventory;
 
+import java.util.Arrays;
 import java.util.List;
 
 public final class ClearInventoryCommand implements CommandExecutor {
@@ -28,25 +29,25 @@ public final class ClearInventoryCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (!(commandSender instanceof Player player)) {
+        if (!(commandSender instanceof Player)) {
             commandSender.sendMessage("Ta komenda jest dostepna tylko dla graczy.");
             return true;
         }
 
-        player.openInventory(new ClearInventoryConfirm().getInventory());
+        ((Player) commandSender).openInventory(new ClearInventoryConfirm().getInventory());
         return true;
     }
 
     public class ClearInventoryConfirm implements ClickableInventory {
-        private static final ItemStack CONFIRM_ITEM = new ItemStack(Material.STAINED_GLASS_PANE, 1, DyeColor.LIME.getData());
-        private static final ItemStack DECLINE_ITEM = new ItemStack(Material.STAINED_GLASS_PANE, 1, DyeColor.RED.getData());
-        private static final ItemStack INFO_ITEM = new ItemStack(Material.PAPER);
+        private final ItemStack CONFIRM_ITEM = new ItemStack(Material.STAINED_GLASS_PANE, 1, DyeColor.LIME.getData());
+        private final ItemStack DECLINE_ITEM = new ItemStack(Material.STAINED_GLASS_PANE, 1, DyeColor.RED.getData());
+        private final ItemStack INFO_ITEM = new ItemStack(Material.PAPER);
 
-        static {
+        {
             {
                 ItemMeta confirm = CONFIRM_ITEM.getItemMeta();
                 confirm.setDisplayName(ChatColor.GREEN + "Potwierdz wyczyszczenie ekwipunku");
-                confirm.setLore(List.of(ChatColor.DARK_GRAY + "\u00bb " + ChatColor.GRAY + "Kliknij aby wyczyscic swoj ekwipunek.",
+                confirm.setLore(Arrays.asList(ChatColor.DARK_GRAY + "\u00bb " + ChatColor.GRAY + "Kliknij aby wyczyscic swoj ekwipunek.",
                         ChatColor.GRAY + "Czyszczenie nie obejmuje zakupionych brushow, oraz zbrojki."));
                 CONFIRM_ITEM.setItemMeta(confirm);
             }
@@ -54,14 +55,14 @@ public final class ClearInventoryCommand implements CommandExecutor {
             {
                 ItemMeta decline = DECLINE_ITEM.getItemMeta();
                 decline.setDisplayName(ChatColor.RED + "Anuluj wyczyszczenie ekwipunku");
-                decline.setLore(List.of(ChatColor.DARK_GRAY + "\u00bb " + ChatColor.GRAY + "Kliknij jezeli nie chcesz zeby twoj ekwipunek zostal wyczyszczony."));
+                decline.setLore(Arrays.asList(ChatColor.DARK_GRAY + "\u00bb " + ChatColor.GRAY + "Kliknij jezeli nie chcesz zeby twoj ekwipunek zostal wyczyszczony."));
                 DECLINE_ITEM.setItemMeta(decline);
             }
 
             {
                 ItemMeta info = INFO_ITEM.getItemMeta();
                 info.setDisplayName(ChatColor.GRAY + "Informacja");
-                info.setLore(List.of(ChatColor.GRAY + "Czyszczenie nie obejmuje drogich itemkow, takich jak brushe.", ChatColor.GRAY + "Rowniez nie obejmuje zbrojki."));
+                info.setLore(Arrays.asList(ChatColor.GRAY + "Czyszczenie nie obejmuje drogich itemkow, takich jak brushe.", ChatColor.GRAY + "Rowniez nie obejmuje zbrojki."));
                 INFO_ITEM.setItemMeta(info);
             }
         }

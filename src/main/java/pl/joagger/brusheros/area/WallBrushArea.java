@@ -20,23 +20,18 @@ public class WallBrushArea implements BrushArea {
 
     @Override
     public Matrix2x3D getArea(BlockFace face) {
-        switch (face) {
-            case NORTH -> {
-                return new Matrix2x3D(x, y, 0, 0, z, 0);
-            }
-            case SOUTH -> {
-                return new Matrix2x3D(x, y, 0, 0, 0, z);
-            }
-            case EAST -> {
-                return new Matrix2x3D(0, z, 0, 0, x, y);
-            }
-            case WEST -> {
-                return new Matrix2x3D(z, 0, 0, 0, x, y);
-            }
-            case DOWN, UP -> {
-                return new Matrix2x3D(x, y, 0, z, x, y);
-            }
-            default -> throw new IllegalArgumentException("Illegal block face.");
+        if (face == BlockFace.NORTH) {
+            return new Matrix2x3D(x, y, 0, 0, z, 0);
+        } else if (face == BlockFace.SOUTH) {
+            return new Matrix2x3D(x, y, 0, 0, 0, z);
+        } else if (face == BlockFace.EAST) {
+            return new Matrix2x3D(0, z, 0, 0, x, y);
+        } else if (face == BlockFace.WEST) {
+            return new Matrix2x3D(z, 0, 0, 0, x, y);
+        } else if (face == BlockFace.DOWN || face == BlockFace.UP) {
+            return new Matrix2x3D(x, y, 0, z, x, y);
+        } else {
+            throw new IllegalArgumentException("Illegal block face.");
         }
     }
 }

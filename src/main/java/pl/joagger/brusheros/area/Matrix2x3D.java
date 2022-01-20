@@ -3,11 +3,27 @@ package pl.joagger.brusheros.area;
 
 import org.bukkit.configuration.ConfigurationSection;
 
-public record Matrix2x3D(
-        double xMin, double xMax,
-        double yMin, double yMax,
-        double zMin, double zMax
-) {
+public final class Matrix2x3D {
+    private final double xMin;
+    private final double xMax;
+    private final double yMin;
+    private final double yMax;
+    private final double zMin;
+    private final double zMax;
+
+    Matrix2x3D(
+            double xMin, double xMax,
+            double yMin, double yMax,
+            double zMin, double zMax
+    ) {
+        this.xMin = xMin;
+        this.xMax = xMax;
+        this.yMin = yMin;
+        this.yMax = yMax;
+        this.zMin = zMin;
+        this.zMax = zMax;
+    }
+
     public Matrix2x3D(ConfigurationSection section) {
         this(
                 Double.parseDouble(section.getString("x").split(":")[0]),
@@ -19,15 +35,27 @@ public record Matrix2x3D(
         );
     }
 
-    @Override
-    public String toString() {
-        return "[" +
-                "xMin=" + xMin +
-                ", xMax=" + xMax +
-                ", yMin=" + yMin +
-                ", yMax=" + yMax +
-                ", zMin=" + zMin +
-                ", zMax=" + zMax +
-                ']';
+    public double xMin() {
+        return xMin;
+    }
+
+    public double xMax() {
+        return xMax;
+    }
+
+    public double yMin() {
+        return yMin;
+    }
+
+    public double yMax() {
+        return yMax;
+    }
+
+    public double zMin() {
+        return zMin;
+    }
+
+    public double zMax() {
+        return zMax;
     }
 }
